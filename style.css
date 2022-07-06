@@ -1,11 +1,15 @@
 body{
     height: 100vh;
+    max-width: 90%;
+    margin: auto;
     background-color: #ABC9FF;
     font-family: 'Open Sans', sans-serif;
 }
 
 .flex{
     display: flex;
+    /*flex*/
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -20,20 +24,19 @@ body{
     font-size: 30px;
 }
 
-#small,#medium{display: none;}
+#small,#medium,#large{width: 33%;}
 
 @media screen and (max-width: 1024px){
     body{background-color: #FFDEDE;}
     .flex h2{font-size: 60px;}
     .flex p{font-size: 20px;}
-    #medium{display: block;}
-    #small,#large{display: none;}
+    #small{width: 66%;}
+    #medium{width: 33%;}
 }
 
 @media screen and (max-width: 480px){
     body{background-color: #FF8B8B;}
     .flex h2{font-size: 40px;}
     .flex p{font-size: 10px;}
-    #small{display: block;}
-    #medium,#large{display: none;}
+    #small,#medium,#large{width: 100%;}
 }
